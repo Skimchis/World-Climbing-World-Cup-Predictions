@@ -1,0 +1,15 @@
+# Final Results and conclusions
+
+## Semifinalists Prediction
+Achieved an overall 68% precision across the 5 events held in 2026 using the Bayesian-shrunk progression rate model to get our semifinalist roster. For the Bayesian shrinkage, I utilised a coefficient of 5, testing against 3 and 4 which didn't give any differences in our predicted semifinalists
+
+## The scoring Model
+Used Ridge regression to produce 2 models to predict PctOfBest scores for each athlete using variables from the style of the boulders and each athlete's affinity. One model did not include interaction terms which gave an R^2 of 0.121, including interaction terms improved that to an R^2 of 0.201. MAE also decreased from 0.291 to 0.276. The interaction terms came out positive which is evidence to support that style-matching is important to include in the model. Though one might perform hypothesis tests in the future to support this.
+
+Although our R^2 value is pretty small, with the variation that comes in athletes performance during competitions, it is still somewhat reasonable but can be improved in the future by including more factors mentioned in the Readme.
+
+## Podium simulation and Backtesting
+Over the 2026 events, the model predicted 11/15 podium spots correctly, giving a 73% precision, compared to an expected 12.5% precision if one were to just guess the podium spots.
+
+## Issues Encountered with the model
+The model consistently predicts the same three athletes for the podium spots across nearly all events. This is likely because of the dominance these athletes have had this season and due to a lack of data of the newer athletes coming onto the circuit and the older athletes leaving the circuit. Perhaps as more competitions go on and this short span of dominance ends, we may see a more even spread of predictions by the model. The model still performed well in 2026 because these athletes did indeed appear in the podium majority of the time in 2026. 
