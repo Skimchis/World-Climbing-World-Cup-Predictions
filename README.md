@@ -119,12 +119,12 @@ Packages required:
 * Matplotlib
 * Seaborn
 
-1. First, clean the data (the cleaned files are already included in this repo, so this step can be skipped unless you're starting from raw data).
-2. Run the semifinalist prediction notebook to produce the predicted semifinalist roster via Bayesian shrinkage.
-3. Run the style affinity notebook to build each athlete's style profile (uses the predicted roster from step 2).
-4. Run the scoring model notebook which trains the Ridge regression model (shown with and without interaction terms).
-5. Run the Monte Carlo simulation notebook to set up the simulation functions.
-6. Run the backtesting notebook to reproduce the precision/recall and podium comparison results.
+
+1. Run the semifinalist prediction notebook to produce the predicted semifinalist roster via Bayesian shrinkage.
+2. Run the style affinity notebook to build each athlete's style profile (uses the predicted roster from step 2).
+3. Run the scoring model notebook which trains the Ridge regression model (shown with and without interaction terms).
+4. Run the Monte Carlo simulation notebook to set up the simulation functions.
+5. Run the backtesting notebook to reproduce the precision/recall and podium comparison results.
 
 # Future Steps to explore
 The following steps could be explored to improve the model:
