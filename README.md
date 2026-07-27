@@ -109,3 +109,25 @@ The simulated rounds are ranked by 'Pct_Of_Best' rather than an actual absolute 
 The semifinalists and finalist progression rates used for backtesting were computed by pooling all events in the data together including the 2026 events that we used to validate against. A proper backtest would've recomputed all these using only chronologically prior data which hasn't been implemented. This is a point to take note of when looking at the precision figures as they probably overstate the true accuracy to some degree as it has been biased using the actual data within the model.
 
 We've only been able to use 5 events in the 2026 season to backtest the model. This is not a big sample to use to test the model against and whilst I've achieved a 73% overlap in the prediction of the podium, the model consistently predicts the same 3 names for the podium spots which is not ideal.
+
+
+# How to run the model
+Packages required:
+* Pandas
+* Numpy
+* Scikit-learn
+* Matplotlib
+* Seaborn
+
+1. First, clean the data (the cleaned files are already included in this repo, so this step can be skipped unless you're starting from raw data).
+2. Run the semifinalist prediction notebook to produce the predicted semifinalist roster via Bayesian shrinkage.
+3. Run the style affinity notebook to build each athlete's style profile (uses the predicted roster from step 2).
+4. Run the scoring model notebook which trains the Ridge regression model (shown with and without interaction terms).
+5. Run the Monte Carlo simulation notebook to set up the simulation functions.
+6. Run the backtesting notebook to reproduce the precision/recall and podium comparison results.
+
+# Future Steps to explore
+The following steps could be explored to improve the model:
+* Introduce athlete-specific consistency profiles for better variation in good/bad days athlete to athlete
+* Additional style categories should be added. E.g crimps/slopers or longer boulders etc
+
